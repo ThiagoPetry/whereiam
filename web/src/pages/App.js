@@ -5,7 +5,6 @@ import Loading from "../components/Loading";
 const App = () => {
   const [loading, setLoading] = useState(false);
 
-  /* global google */
   let map, infoWindow;
 
   function initMap() {
