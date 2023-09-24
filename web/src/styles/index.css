@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root,
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+#loading {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#loading .spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-map-control-button {
+  top: 10px !important;
+  left: 10px !important;
+  background: none padding-box #fff;
+  display: table-cell;
+  border: 0px;
+  margin: 0px;
+  padding: 0px 17px;
+  text-transform: none;
+  appearance: none;
+  position: relative;
+  user-select: none;
+  direction: ltr;
+  overflow: hidden;
+  text-align: center;
+  height: 40px;
+  vertical-align: middle;
+  color: #666666;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 20px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+  min-width: 66px;
+  font-weight: bold;
+}
+
+.custom-map-control-button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.custom-map-control-button:active {
+  opacity: 0.8;
+}
+
+.gm-style .gm-style-iw {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+}
