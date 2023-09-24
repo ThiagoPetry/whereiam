@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+import { loadScript } from "../utils/loadScript";
 
 import Loading from "../components/Loading";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
+
+  const scriptLoaded = useRef();
 
   let map, infoWindow;
 
@@ -70,6 +74,13 @@ const App = () => {
   };
 
   window.initMap = initMap;
+
+  useEffect(() => {
+    if (!scriptLoaded.current) {
+      loadScript();
+      scriptLoaded.current = true;
+    }
+  }, []);
 
   return (
     <div className={"app"}>
