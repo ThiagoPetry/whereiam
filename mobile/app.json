@@ -18,9 +18,15 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "br.com.tkpstudios.whereiam",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyApK068u8-nXz3BJEmpUIjE7kFcumtrApo"
+        }
       }
     },
     "web": {
